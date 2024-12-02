@@ -1,11 +1,13 @@
-# Live Streaming Project Architecture
+# Live Streaming Architecture
 
 <img width="2528" alt="image" src="https://github.com/user-attachments/assets/dcb85c27-4775-4ab6-98b0-f1b09b3a9b73">
 
 
-### Summary of "Live Streaming Architecture"
+###  "Live Streaming Architecture" sample framework 
 
-The **Live Streaming Architecture** refers to the comprehensive framework that supports the real-time transmission and delivery of video and audio content over the internet. It enables live events (e.g., sports, concerts, webinars) to be streamed to various devices, including browsers, mobile phones, and smart TVs. The architecture is composed of multiple components, each with specific roles in ensuring smooth and efficient live streaming. 
+The **Live Streaming Architecture** refers to the comprehensive framework that supports the real-time transmission and delivery of video and audio content over the internet.
+It enables live events (e.g., sports, concerts, webinars) to be streamed to various devices, including browsers, mobile phones, and smart TVs.
+The architecture is composed of multiple components, each with specific roles in ensuring smooth and efficient live streaming. 
 
 #### Key Components:
 
