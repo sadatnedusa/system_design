@@ -1,6 +1,8 @@
 # Live Streaming Project Architecture
 
 
+<img width="2528" alt="image" src="https://github.com/user-attachments/assets/7455cb34-492d-4aca-883f-03ddbc045e6c">
+
 ## RTMP and RTSP
 
 ### RTMP (Real-Time Messaging Protocol) and RTSP (Real-Time Streaming Protocol) are two key protocols used in video streaming projects, each serving different purposes and use cases:
