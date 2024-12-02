@@ -1,7 +1,6 @@
 # Live Streaming Architecture
 
-<img width="2482" alt="image" src="https://github.com/user-attachments/assets/9d268753-16af-48bb-83f2-57c226f40497">
-
+<img width="2482" alt="image" src="https://github.com/user-attachments/assets/be3d1a5c-f96d-4bab-9bc0-3bee289d4c31">
 
 ###  "Live Streaming Architecture" sample framework 
 
