@@ -2,57 +2,10 @@
 
 <img width="2528" alt="image" src="https://github.com/user-attachments/assets/dcb85c27-4775-4ab6-98b0-f1b09b3a9b73">
 
-## RTMP and RTSP
 
-### RTMP (Real-Time Messaging Protocol) and RTSP (Real-Time Streaming Protocol) are two key protocols used in video streaming projects, each serving different purposes and use cases:
-
-### **RTMP (Real-Time Messaging Protocol)**
-- **Purpose**: RTMP is a protocol developed by Adobe for delivering video, audio, and data over the internet.
-It is primarily used for live streaming and was commonly associated with Adobe Flash Player.  
-
-- **Common Use Cases**:
-  - Live streaming to platforms like YouTube, Facebook, Twitch, etc.
-  - Low-latency communication between the broadcaster and server.
-  - Streaming between encoding software (e.g., OBS Studio) and Content Delivery Networks (CDNs).
-  
-- **Key Features**:
-  - Works over TCP, ensuring reliable data transmission.
-  - Initially optimized for Flash-based video delivery.
-  - Offers various versions like RTMPS (secure RTMP) and RTMPT (RTMP tunneled over HTTP).
-  - It is gradually being replaced by newer protocols like SRT (Secure Reliable Transport) and HLS (HTTP Live Streaming).
-
-
-### **RTSP (Real-Time Streaming Protocol)**
-- **Purpose**: RTSP is designed for controlling streaming media servers and is often used for IP cameras and surveillance systems.
-- **Common Use Cases**:
-  - Real-time streaming of video from IP cameras.
-  - On-demand video streaming.
-  - Applications that require low-latency streams.
-  
-- **Key Features**:
-  - Acts like a "remote control" for streaming, providing features like play, pause, and stop.
-  - Often used with RTP (Real-Time Transport Protocol) for data delivery and synchronization.
-  - Can work over UDP (preferred for low-latency) or TCP (for reliable transmission).
-  - Common in environments where live feeds need to be accessed directly, such as in CCTV systems.
-
-
-### **Key Differences**
-| **Aspect**        | **RTMP**                     | **RTSP**                     |
-|--------------------|------------------------------|------------------------------|
-| **Usage**          | Live streaming platforms     | Surveillance, low-latency feeds |
-| **Transport Protocol** | TCP                          | Usually RTP over UDP or TCP   |
-| **Latency**        | Higher than RTSP             | Lower for real-time feeds     |
-| **Adoption**       | Legacy, declining in use     | Common in IP cameras & DVRs   |
-| **Security**       | RTMPS for encryption         | Relies on other secure transport layers |
-
-### **Conclusion**
-- Use **RTMP** for broadcasting live streams to platforms and CDNs.
-- Use **RTSP** for scenarios requiring low-latency access, such as surveillance systems or IP camera streaming. 
-
-
----
 ## **Encoding **
-Encoding is a critical process in a streaming project that involves converting raw video and audio files into a digital format suitable for streaming. It compresses the media while maintaining acceptable quality, making it feasible to transmit over the internet efficiently.
+Encoding is a critical process in a streaming project that involves converting raw video and audio files into a digital format suitable for streaming.
+It compresses the media while maintaining acceptable quality, making it feasible to transmit over the internet efficiently.
 
 ### **Why Encoding is Important**
 1. **Bandwidth Efficiency**: Reduces file size to match the viewer's internet speed without buffering.
@@ -235,11 +188,58 @@ Deploy streaming players (e.g., Video.js, Shaka Player) that support HLS or DASH
 
 ---
 
+## RTMP and RTSP
+
+### RTMP (Real-Time Messaging Protocol) and RTSP (Real-Time Streaming Protocol) are two key protocols used in video streaming projects, each serving different purposes and use cases:
+
+### **RTMP (Real-Time Messaging Protocol)**
+- **Purpose**: RTMP is a protocol developed by Adobe for delivering video, audio, and data over the internet.
+It is primarily used for live streaming and was commonly associated with Adobe Flash Player.  
+
+- **Common Use Cases**:
+  - Live streaming to platforms like YouTube, Facebook, Twitch, etc.
+  - Low-latency communication between the broadcaster and server.
+  - Streaming between encoding software (e.g., OBS Studio) and Content Delivery Networks (CDNs).
+  
+- **Key Features**:
+  - Works over TCP, ensuring reliable data transmission.
+  - Initially optimized for Flash-based video delivery.
+  - Offers various versions like RTMPS (secure RTMP) and RTMPT (RTMP tunneled over HTTP).
+  - It is gradually being replaced by newer protocols like SRT (Secure Reliable Transport) and HLS (HTTP Live Streaming).
+
+
+### **RTSP (Real-Time Streaming Protocol)**
+- **Purpose**: RTSP is designed for controlling streaming media servers and is often used for IP cameras and surveillance systems.
+- **Common Use Cases**:
+  - Real-time streaming of video from IP cameras.
+  - On-demand video streaming.
+  - Applications that require low-latency streams.
+  
+- **Key Features**:
+  - Acts like a "remote control" for streaming, providing features like play, pause, and stop.
+  - Often used with RTP (Real-Time Transport Protocol) for data delivery and synchronization.
+  - Can work over UDP (preferred for low-latency) or TCP (for reliable transmission).
+  - Common in environments where live feeds need to be accessed directly, such as in CCTV systems.
+
+
+### **Key Differences**
+| **Aspect**        | **RTMP**                     | **RTSP**                     |
+|--------------------|------------------------------|------------------------------|
+| **Usage**          | Live streaming platforms     | Surveillance, low-latency feeds |
+| **Transport Protocol** | TCP                          | Usually RTP over UDP or TCP   |
+| **Latency**        | Higher than RTSP             | Lower for real-time feeds     |
+| **Adoption**       | Legacy, declining in use     | Common in IP cameras & DVRs   |
+| **Security**       | RTMPS for encryption         | Relies on other secure transport layers |
+
+### **Conclusion**
+- Use **RTMP** for broadcasting live streams to platforms and CDNs.
+- Use **RTSP** for scenarios requiring low-latency access, such as surveillance systems or IP camera streaming. 
+
+---
+
 ### **Delivery and Playback with a Content Delivery Network (CDN)**
 
 A **Content Delivery Network (CDN)** ensures your video content is delivered efficiently, quickly, and reliably to viewers worldwide by caching and serving it from servers closest to the end user. Here’s a detailed look at how a CDN integrates into a streaming project:
-
-
 
 ### **1. Why Use a CDN for Streaming?**
 1. **Global Coverage**: CDNs have Points of Presence (PoPs) worldwide, reducing latency.
@@ -294,8 +294,6 @@ A **Content Delivery Network (CDN)** ensures your video content is delivered eff
      - Integration with Azure Media Services for live and on-demand streaming.
      - Advanced analytics and monitoring.
    - **Best for**: Microsoft Azure ecosystem users.
-
-
 
 ### **4. Setting Up a CDN for Video Streaming**
 #### **Step 1: Configure Your Origin Server**
@@ -442,8 +440,6 @@ Before setting up the CDN, ensure you have the following:
 3. **Scalability**:
    - CloudFront automatically scales to handle traffic spikes.
 
-
-
 ### **3. Diagram of the Workflow**
 1. **Client Requests**:
    - The video player sends requests for the `master.m3u8` and `.ts` files.
@@ -455,7 +451,6 @@ Before setting up the CDN, ensure you have the following:
 ```
 [Client] ---> [Edge Server/CDN Cache] ---> [Origin Server (S3)]
 ```
-
 
 ### **4. Benefits of This Setup**
 - **Low Latency**: Reduced buffering and faster load times.
@@ -509,8 +504,6 @@ aws cloudfront create-distribution \
   --default-root-object videos/master.m3u8 \
   --query "Distribution.DomainName"
 ```
-
-
 
 ### **Option 2: Automating with Terraform**
 
@@ -1035,8 +1028,6 @@ aws cloudfront create-invalidation \
 #### **Step 3: Visualize with QuickSight**
 - Integrate Athena queries with QuickSight for dashboards.
 
-
-
 ## **Approach 2: Using GitHub Actions for CI/CD**
 
 GitHub Actions can automate encoding, deployment, and monitoring without relying solely on AWS.
@@ -1076,17 +1067,5 @@ GitHub Actions can automate encoding, deployment, and monitoring without relying
 Integrate **CloudFront log processing** using a GitHub-hosted runner or deploy to Lambda for automation.
 
 
-## **Which Approach Should You Choose?**
-
-### **Use AWS Native Tools If:**
-- You’re fully integrated into the AWS ecosystem.
-- Prefer seamless scaling and low-maintenance solutions.
-
-### **Use GitHub Actions If:**
-- You need a platform-agnostic CI/CD system.
-- Your team is more comfortable with Git-based workflows.
-
-
----
 
 
