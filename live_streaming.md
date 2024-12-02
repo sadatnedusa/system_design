@@ -2,6 +2,7 @@
 
 <img width="2528" alt="image" src="https://github.com/user-attachments/assets/de8191b0-2fa0-47b2-9a76-36b6f86f482e">
 
+<img width="2528" alt="image" src="https://github.com/user-attachments/assets/4003fe4b-8dd7-4c2e-bb89-241b3ba5129c">
 
 ###  "Live Streaming Architecture" sample framework 
 
