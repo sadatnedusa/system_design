@@ -3,6 +3,44 @@
 <img width="2528" alt="image" src="https://github.com/user-attachments/assets/dcb85c27-4775-4ab6-98b0-f1b09b3a9b73">
 
 
+### Summary of "Live Streaming Architecture"
+
+The **Live Streaming Architecture** refers to the comprehensive framework that supports the real-time transmission and delivery of video and audio content over the internet. It enables live events (e.g., sports, concerts, webinars) to be streamed to various devices, including browsers, mobile phones, and smart TVs. The architecture is composed of multiple components, each with specific roles in ensuring smooth and efficient live streaming. 
+
+#### Key Components:
+
+1. **Live Event Capture**:
+   - **Recording**: The live event is captured using cameras and microphones, where both video and audio streams are recorded. These signals are then converted into digital formats for encoding.
+
+2. **Encoding**:
+   - **Encoding**: The recorded content is compressed and encoded into a suitable format (e.g., H.264 video and AAC audio). The encoded data is usually optimized for different bitrates and resolutions to ensure compatibility with varying network speeds and device capabilities.
+
+3. **RTMP/RTSP Protocols**:
+   - **RTMP/RTSP**: The encoded stream is then transmitted to the streaming server using Real-Time Messaging Protocol (RTMP) or Real-Time Streaming Protocol (RTSP), which ensures the video can be broadcast to the audience in real-time.
+
+4. **Streaming Server**:
+   - **Streaming Server Engine**: The streaming server processes the incoming stream, handles requests from clients, and distributes the stream to different endpoints.
+   - **Recording Module**: Stores the live video for later use or on-demand playback.
+   
+5. **Content Storage**:
+   - **Segment Storage/Cloud Storage**: The streaming content is divided into small segments (chunks) for easier and faster delivery, stored on cloud servers or dedicated storage systems. Cloud storage ensures scalability and global reach.
+
+6. **Content Delivery Network (CDN)**:
+   - **CDN Interconnect**: Content is distributed across the globe using a CDN, which caches and serves the content from edge locations closest to end-users. This reduces latency and improves delivery speed, ensuring a smooth viewing experience.
+   - **Fastly CDN**: A specialized CDN provider like Fastly can optimize content delivery by using edge servers to quickly serve content to users.
+
+7. **End-User Devices**:
+   - **Browser/Client Devices**: End users access the stream through web browsers on desktops and laptops, mobile devices, or dedicated streaming players. These devices interact with the CDN to retrieve and play the live content in real-time.
+
+### Flow Overview:
+
+The general flow starts with the live event being captured, followed by encoding and transmission to the streaming server. 
+The server processes and stores the content while distributing it to a CDN.
+The CDN efficiently delivers the content to end-user devices, ensuring minimal delay and high quality across diverse networks and devices.
+
+
+
+---
 ## **Encoding **
 Encoding is a critical process in a streaming project that involves converting raw video and audio files into a digital format suitable for streaming.
 It compresses the media while maintaining acceptable quality, making it feasible to transmit over the internet efficiently.
